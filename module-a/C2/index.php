@@ -8,39 +8,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
     <?php
-    $pdo = new PDO(
-            'mysql:host=localhost;dbname=module-a',
-            'root',
-            'root'
+    $pdo = new PDO('mysql:host=localhost;dbname=module-a', 'root', 'root'
     );
-
-
     $year = ($_GET['year'] ?? date('Y'));
     $month = ($_GET['month'] ?? date('m'));
-
-
     //    post data
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
         $title = trim($_POST['title'] ?? '');
         $taskDate = $_POST['task_date'] ?? '';
-
         $isRecurring = isset($_POST['is_recurring']);
-
         $type = $_POST['type'] ?? null;
         $cycle = $_POST['cycle'] ?? null;
         $endDate = $_POST['end_date'] ?? null;
-
-
         if ($title !== '' && $taskDate !== '') {
-
             if (!$isRecurring) {
                 $type = null;
                 $cycle = null;
                 $endDate = null;
             }
-
-
             $stmt = $pdo->prepare("
             INSERT INTO c2_calander
             (
@@ -53,7 +38,6 @@
             )
             VALUES (?, ?, ?, ?, ?, ?)
         ");
-
             $stmt->execute([
                     $title,
                     $taskDate,
@@ -78,12 +62,8 @@
             );
 
 
-    $weekday =
-            (int)$firstDay->format('w');
-    $calendarStart =
-            $firstDay->modify(
-                    "-{$weekday} days"
-            );
+    $weekday = (int)$firstDay->format('w');
+    $calendarStart = $firstDay->modify("-{$weekday} days");
 
     ?>
 </head>
@@ -102,11 +82,8 @@
                     value="<?= $year ?>"
             >
         </label>
-
-
         <label>
             Month:
-
             <input
                     type="number"
                     name="month"
@@ -120,75 +97,32 @@
         </button>
     </form>
     <table class="calendar">
-
         <thead>
-
         <tr>
-
             <th>S</th>
-
             <th>M</th>
-
             <th>T</th>
-
             <th>W</th>
-
             <th>T</th>
-
             <th>F</th>
-
             <th>S</th>
-
         </tr>
-
         </thead>
-
-
         <tbody>
 
         <?php
-
-        $current =
-                $calendarStart;
-        for (
-                $week = 0;
-                $week < 6;
-                $week++
+        $current = $calendarStart;
+        for ($week = 0; $week < 6; $week++
         ):
 
             ?>
-
             <tr>
-
                 <?php
+                for ($day = 0; $day < 7; $day++):
 
-                for (
-                        $day = 0;
-                        $day < 7;
-                        $day++
-                ):
-
-                    $date =
-                            $current
-                                    ->format('Y-m-d');
-
-
-                    $isCurrentMonth =
-                            (int)$current
-                                    ->format('m')
-                            ===
-                            $month;
-
-                    ?>
-
-                    <td
-                            class="<?=
-                            !$isCurrentMonth
-                                    ?
-                                    'other-month'
-                                    :
-                                    ''
-                            ?>"
+                    $date = $current->format('Y-m-d');
+                    $isCurrentMonth = (int)$current->format('m') === $month; ?>
+                    <td class="<?= !$isCurrentMonth ? 'other-month' : '' ?>"
                     >
 
                         <div class="day">
