@@ -1,0 +1,93 @@
+/*init css */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+}
+
+
+/*init the container*/
+.container {
+    width: 900px;
+    border: 5px solid rgb(46 122 155);
+}
+
+input {
+    display: none;
+}
+
+
+.tab-list {
+    display: flex;
+    gap: 1px;
+}
+
+label {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgb(210 215 230);
+    color: rgb(97 70 149);
+}
+
+
+#about:checked ~ .tab-list label[for='about'],
+#history:checked ~ .tab-list label[for='history'],
+#objective:checked ~ .tab-list label[for='objective'],
+#impact:checked ~ .tab-list label[for='impact'] {
+    background: #fff;
+}
+
+.tab-content {
+    padding: 20px;
+    min-height: 400px;
+}
+
+.about-content, .impact-content, .history-content, .objective-content {
+    display: none;
+}
+
+/*show content*/
+#about:checked ~ .tab-content .about-content,
+#history:checked ~ .tab-content .history-content,
+#objective:checked ~ .tab-content .objective-content,
+#impact:checked ~ .tab-content .impact-content {
+    display: block;
+}
+
+/*init button*/
+button {
+    padding: 12px 20px;
+    color: #fff;
+    border-radius: 5px;
+    background: #36314c;
+    font-weight: 600;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    background: #4236a8;
+    transform: translateY(-5px);
+}
+
+p {
+    color: #b1b3b8;
+    margin-top: 20px;
+}

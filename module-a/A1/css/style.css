@@ -1,0 +1,145 @@
+/* init css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.olympic-rings {
+    position: relative;
+
+    width: 378px;
+    height: 162px;
+}
+
+
+/*all rings*/
+.ring,
+.patch {
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    border: 6px solid;
+    border-radius: 50%;
+
+    background: transparent;
+}
+
+
+.blue {
+    left: 0;
+    top: 0;
+
+    border-color: #0085c7;
+}
+
+.black {
+    left: 134px;
+    top: 0;
+
+    border-color: #000;
+}
+
+.red {
+    left: 268px;
+    top: 0;
+
+    border-color: #df0024;
+}
+
+.yellow {
+    left: 67px;
+    top: 52px;
+
+    border-color: #f4c300;
+}
+
+.green {
+    left: 201px;
+    top: 52px;
+
+    border-color: #009f3d;
+}
+
+
+
+/*
+*/
+.ring.blue,
+.ring.black,
+.ring.red {
+    z-index: 2;
+}
+
+.ring.yellow,
+.ring.green {
+    z-index: 1;
+}
+
+
+.patch {
+    z-index: 3;
+    pointer-events: none;
+}
+
+
+/*
+*/
+.yellow-over-blue {
+    clip-path: inset(
+            0
+            45px
+            80px
+            25px
+    );
+}
+
+
+/*
+*/
+.yellow-over-black {
+    clip-path: inset(
+            35px
+            0
+            25px
+            80px
+    );
+}
+
+
+/*
+    clip green over black
+*/
+.green-over-black {
+    clip-path: inset(
+            0
+            45px
+            80px
+            25px
+    );
+}
+
+
+.green-over-red {
+    clip-path: inset(
+            35px
+            0
+            25px
+            80px
+    );
+}

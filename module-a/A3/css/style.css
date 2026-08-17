@@ -1,0 +1,79 @@
+/*init css */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*header footer*/
+header, footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+header {
+    background: rgb(255 65 0);
+}
+
+main {
+    height: 100%;
+}
+
+footer {
+    background: rgb(255 20 145);
+}
+
+
+.container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        "l main main r"
+        "l main main r"
+}
+
+
+/*left sidebar*/
+.left {
+    background: rgb(30 145 250);
+    grid-area: l;
+    padding: 20px;
+}
+
+.main {
+    background: rgb(70 60 135);
+    padding: 20px;
+    grid-area: main;
+}
+
+.right {
+    grid-area: r;
+    padding: 20px;
+    background: rgb(30 135 30);
+}
+
+
+@media screen and (width <= 768px) {
+    .container {
+        grid-template-areas:
+    "main"
+    "main"
+    "main"
+        "l"
+        "r"
+    }
+}
