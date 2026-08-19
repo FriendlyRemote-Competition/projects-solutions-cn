@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+root {
+    --font-delta: 0px;
+    --line-space-value: 1.5;
+}
+
+* {
+    line-height: 1.5;
+}
+
+/*theme class choose*/
+@custom-variant dark (&:where(.dark, .dark *));
+
+header, footer {
+    @apply dark:bg-white/4 dark:border-white/8 dark:text-white;
+}
+
+.font-small {
+    --font-delta: -2px;
+}
+
+.font-medium {
+    --font-delta: 0px;
+}
+
+.font-large {
+    --font-delta: 2px;
+}
+
+/*init css*/
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @apply dark:bg-slate-950 ;
+}
+
+input {
+    @apply dark:text-slate-600;
+}
+
+.layout {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+button {
+    @apply px-4 py-2 rounded-lg min-w-[80px] duration-300 cursor-pointer font-semibold;
+}
+
+.primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+input {
+    @apply px-4 py-2 rounded-lg border border-slate-200 bg-white;
+}
+
+
+.secondary {
+    @apply bg-blue-50 border border-blue-200 text-blue-950;
+}
+
+
+/*heading*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    @apply dark:text-white;
+}
+
+h1 {
+    font-size: calc(32px + var(--font-delta));
+}
+
+
+h2 {
+    font-size: calc(24px + var(--font-delta));
+}
+
+h3 {
+    font-size: calc(18px + var(--font-delta));
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.content-p {
+    font-size: calc(16px + var(--font-delta));
+    line-height: var(--line-space-value);
+}
+
+
+p, span {
+    @apply text-slate-600 dark:text-white/80;
+}
+
+
+.card {
+    @apply dark:bg-white/4 dark:border-white/8;
+}
