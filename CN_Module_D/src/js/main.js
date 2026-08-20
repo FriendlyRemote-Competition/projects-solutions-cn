@@ -21,7 +21,7 @@ function hotelStory() {
         requestAnimationFrame(update);
     }
 
-    fetch('../../public/media_files/content/hotel-copy.json').then(res => {
+    fetch('public/media_files/content/hotel-copy.json').then(res => {
         if (res.ok) {
             return res.json();
         }
@@ -173,7 +173,7 @@ function initRoomsPagination() {
  *  room data
  */
 function roomsData() {
-    fetch('../../public/media_files/data/rooms.json').then(res => {
+    fetch('public/media_files/data/rooms.json').then(res => {
         if (res.ok) {
             return res.json();
         }
@@ -186,7 +186,7 @@ function roomsData() {
                 <div 
                 data-index="${index}"
                 id="${item.id}" class="rooms-item  ${index === 0 ? 'active' : ''}">
-                                  <img src="/public/media_files/${item.image}" alt="${item.name}">
+                                  <img src="public/media_files/${item.image}" alt="${item.name}">
                                   <div class="rooms-right">
                                     <h3 class="room-name">${item.name}</h3>
                                     <p>${item.description}</p>
@@ -294,7 +294,7 @@ hotelStory();
  * dining data load
  */
 function diningData() {
-    fetch('../../public/media_files/content/dining-copy.json').then(res => {
+    fetch('public/media_files/content/dining-copy.json').then(res => {
         if (res.ok) {
             return res.json();
         }
@@ -304,7 +304,7 @@ function diningData() {
 
         diningList.append(`
                <article class="dining-item" tabindex="0">
-                <img src="/public/media_files/images/dining-su-kitchen.webp" alt="dining-su-kitchen">
+                <img src="public/media_files/images/dining-su-kitchen.webp" alt="dining-su-kitchen">
                 <div class="dining-content">
                 <h4 class="secondary-title">${data['su-kitchen'].eyebrow}</h4>
                 <h3>${data['su-kitchen'].name}</h3>
@@ -318,7 +318,7 @@ function diningData() {
 
         diningList.append(`
                <article  class="dining-item"  tabindex="0">
-                <img src="/public/media_files/images/dining-river-bar.webp" alt="dining-river-bar">
+                <img src="public/media_files/images/dining-river-bar.webp" alt="dining-river-bar">
                 <div  class="dining-content">
                 <h4 class="secondary-title">${data['river-bar'].eyebrow}</h4>
                 <h3>${data['river-bar'].name}</h3>
@@ -339,7 +339,7 @@ diningData();
 
 
 function shanghaiData() {
-    fetch('../../public/media_files/data/nearby.json').then(res => {
+    fetch('public/media_files/data/nearby.json').then(res => {
         if (res.ok) {
             return res.json();
         }
@@ -349,7 +349,7 @@ function shanghaiData() {
         data.forEach(item => {
             $("#shanghai .right").append(`
                     <div data-id="${item.markerId}" tabindex="0" class="shanghai-item">
-                            <img  width="100" src="/public/media_files/${item.image}" alt="${item.name}">
+                            <img  width="100" src="public/media_files/${item.image}" alt="${item.name}">
                             <div class="flex flex-col">
                               <h3>${item.name}</h3>  
                            <p>${item.description}</p>
@@ -368,7 +368,7 @@ shanghaiData();
 //footer
 
 function footerData() {
-    fetch('../../public/media_files/content/footer-copy.json').then(res => {
+    fetch('public/media_files/content/footer-copy.json').then(res => {
         if (res.ok) {
             return res.json();
         }
