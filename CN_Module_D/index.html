@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THE Sù</title>
+    <meta name="description" content="The Sù Hotel Shanghai is a fictional independent boutique hotel set between the historic riverfront atmosphere of
+Suzhou Creek and the contemporary energy of central Shanghai. ">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="/public/media_files/brand/favicon.svg">
+    <script src="libs/jquery-4.0.0.min.js"></script>
+    <base href="/CN_Module_D/">
+</head>
+<body>
+<!--header-->
+<header>
+    <div class="layout flex items-center justify-between">
+        <img width="250" src="/public/media_files/brand/su-hotel-logo-light.svg" alt="hotel logo light">
+        <nav class='flex lg items-center gap-4'>
+            <a href="#hotel">hotel</a>
+            <a href="#rooms">rooms</a>
+            <a href="#dining">dining</a>
+            <a href="#wellness">wellness</a>
+            <a href="#shanghai">shanghai</a>
+        </nav>
+        <div class="flex lg items-center gap-2">
+            <span>EN</span>
+            <button class="secondary">Book your stay</button>
+        </div>
+        <button  aria-expanded="false" class="menu-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</header>
+<!--header-->
+<!--main-->
+<main>
+    <section id="hero">
+        <div class="layout">
+            <span>A quiet address in a city of movement</span>
+            <h1>Stay close to the soul of <br> Shanghai</h1>
+            <div class="flex flex-col-md items-center gap-4">
+                <button class="primary">Book your stay</button>
+                <a href="#hotel" role="button" class="btn third">
+                    <span>Discover the hotel</span>
+                    <img src="/public/media_files/icons/icon-arrow.svg"
+                         alt="discover the hotel">
+                </a>
+            </div>
+
+            <div class="justify-end scroll-indicator">
+                <a href="#hotel">SCROLL ——————</a>
+            </div>
+        </div>
+        <!--        hero image-->
+        <picture>
+            <source
+                    srcset="/public/media_files/images/hero-shanghai-hotel.webp"
+                    type="image/webp"
+            >
+            <source srcset="public/media_files/images/hero-shanghai-hotel-mobile.webp"
+                    media="screen and (width<=860px)">
+            <img src="/public/media_files/images/hero-shanghai-hotel.jpg" alt="hero-shanghai-hotel">
+        </picture>
+    </section>
+
+    <!--    hotel story-->
+    <section id="hotel">
+        <div class="layout">
+            <div class="left">
+                <img src="/public/media_files/images/story-lobby.webp" alt="story-lobby">
+            </div>
+            <div class="right">
+                <hgroup>
+                    <h3 class="hotel-secondary-title secondary-title"></h3>
+                    <h2 class="title hotel-title"></h2>
+                </hgroup>
+                <p class="hotel-content"></p>
+                <hr>
+                <div class="flex gap-4 items-center justify-between">
+                    <div class="flex flex-col ">
+                        <span class="value rooms"></span>
+                        <span class="label">ROOMS</span>
+                    </div>
+                    <div class="flex flex-col ">
+                        <span class="value restaurants"></span>
+                        <span class="label">RESTAURANTS</span>
+                    </div>
+                    <div class="flex flex-col ">
+                        <div class="flex">
+                            <span class="value hosts"></span> <span class="suffix"></span>
+                        </div>
+                        <span class="label">HOSTS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    rooms-->
+    <section id="rooms">
+        <div class="layout">
+            <hgroup>
+                <h3 class="secondary-title">ROOMS & SUITES</h3>
+                <h2 class="title">A private view of Shanghai</h2>
+            </hgroup>
+
+            <div class="rooms-wrapper">
+                <div class="rooms-container">
+
+                </div>
+            </div>
+            <div class="flex paginate items-center justify-between">
+                <button class="prev">
+                    <img src="/public/media_files/icons/icon-arrow.svg" alt="previous btn">
+                </button>
+                <div class="flex paginate-list gap-1 items-center">
+
+                </div>
+                <button class="next">
+                    <img src="/public/media_files/icons/icon-arrow.svg" alt="next btn">
+                </button>
+            </div>
+        </div>
+    </section>
+    <!--    dining-->
+    <section id="dining">
+        <div class="layout">
+            <hgroup>
+                <h3 class="secondary-title">DINING</h3>
+                <h2 class="title">Shanghai served with clarity</h2>
+            </hgroup>
+            <div class="dining-list">
+
+            </div>
+        </div>
+    </section>
+    <!--    wellness-->
+    <section id="wellness">
+        <div class="layout">
+            <div class="wellness-image">
+                <img src="/public/media_files/images/wellness-pool.webp" alt="wellness-pool">
+                <div class="wellness-image-content">
+                    <h3 class="secondary-title">WELLNESS</h3>
+                    <h2 class="title">A slower rhythm below <br> the city</h2>
+                </div>
+            </div>
+            <!--            wellness list-->
+            <div class="wellness-list">
+                <!--                wellness item-->
+                <div class="wellness-item">
+                    <img src="./public/media_files/icons/icon-spa.svg" alt="icon-spa">
+                    <h3>Spa</h3>
+                    <p>
+                        Restorative treatments grounded in scent, warmth and touch.
+                    </p>
+                    <span>10:00-22:00</span>
+                </div>
+
+                <div class="wellness-item">
+                    <img src="./public/media_files/icons/icon-pool.svg" alt="icon-spa">
+                    <h3>Indoor Pool</h3>
+                    <p>
+                        A 20-metre pool with calm lighting and dedicated family hours.
+                    </p>
+                    <span>06:00–23:00</span>
+                </div>
+
+                <div class="wellness-item">
+                    <img src="./public/media_files/icons/icon-fitness.svg" alt="icon-spa">
+                    <h3>Fitness Studio</h3>
+                    <p>
+                        Natural light, thoughtful equipment and private sessions on request.
+                    </p>
+                    <span>Open 24 hours</span>
+                </div>
+
+                <div class="wellness-item">
+                    <img src="./public/media_files/icons/icon-transfer.svg" alt="icon-spa">
+                    <h3>Private Transfers</h3>
+                    <p>
+                        Quiet airport and station journeys arranged by your hotel host.
+                    </p>
+                    <span>By reservation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--    map-->
+    <section id="shanghai">
+        <div class="layout ">
+            <h2 class="title">The city, within easy reach</h2>
+            <div class="flex flex-col-md justify-between gap-2">
+                <div class="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img"
+                         aria-labelledby="title desc"><title id="title">Shanghai neighbourhood map</title>
+                        <desc id="desc">Stylised map showing The Sù Hotel, the Bund, Suzhou Creek Walk and M50 Art
+                            District.
+                        </desc>
+                        <rect width="900" height="640" fill="#E7E2D8"/>
+                        <g fill="none" stroke="#C8C0B3" stroke-width="3" opacity=".8">
+                            <path d="M0 110 900 230M0 280 900 350M0 500 900 430M150 0 230 640M420 0 390 640M690 0 620 640"/>
+                            <path d="m0 410 240-80 180 30 180-120 300 10"/>
+                        </g>
+                        <path d="M-30 160c190-90 280 70 425 20s225-170 540-70v95c-275-75-370 35-510 78S185 205-30 294Z"
+                              fill="#7898A0" opacity=".8"/>
+                        <path d="M760-30c-50 180-5 390 170 540" fill="none" stroke="#7898A0" stroke-width="80"
+                              opacity=".8"/>
+                        <g font-family="Arial,sans-serif" font-size="20" fill="#596064">
+                            <text x="80" y="88">M50</text>
+                            <text x="400" y="315">SUZHOU CREEK</text>
+                            <text x="735" y="390">THE BUND</text>
+                        </g>
+                        <g id="hotel-location">
+                            <circle cx="492" cy="280" r="18" fill="#151719"/>
+                            <circle cx="492" cy="280" r="7" fill="#B28A52"/>
+                            <text x="515" y="287" font-family="Arial,sans-serif" font-size="19" fill="#151719">THE SÙ
+                                HOTEL
+                            </text>
+                        </g>
+                        <g id="marker-m50" tabindex="0">
+                            <circle cx="132" cy="112" r="18" fill="#F4F0E8" stroke="#B28A52" stroke-width="5"/>
+                            <text x="126" y="119" font-family="Arial,sans-serif" font-size="18">3</text>
+                        </g>
+                        <g id="marker-suzhou-creek" tabindex="0">
+                            <circle cx="410" cy="255" r="18" fill="#F4F0E8" stroke="#B28A52" stroke-width="5"/>
+                            <text x="404" y="262" font-family="Arial,sans-serif" font-size="18">2</text>
+                        </g>
+                        <g id="marker-bund" tabindex="0">
+                            <circle cx="738" cy="374" r="18" fill="#F4F0E8" stroke="#B28A52" stroke-width="5"/>
+                            <text x="732" y="381" font-family="Arial,sans-serif" font-size="18">1</text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="right">
+                    <div class="shanghai-item"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--footer-->
+<footer>
+    <div class="layout flex items-center footer-main justify-between">
+        <div class="flex flex-col gap-2">
+            <img src="/public/media_files/brand/su-hotel-logo-light.svg" alt="logo">
+            <p class="address"></p>
+            <p class="phone"></p>
+            <p class="email"></p>
+        </div>
+        <nav class="navigation flex flex-col"></nav>
+        <div class="flex flex-col">
+            <h2>Stay close to the story</h2>
+            <label>
+                <span>Email address</span>
+                <input type="email" placeholder="you@example.com">
+            </label>
+        </div>
+    </div>
+    <div class="layout">
+        <hr>
+        <div class="flex footer-secondary items-center justify-between">
+            <span class="copyright"></span>
+            <nav class="flex items-center social gap-2">
+
+            </nav>
+        </div>
+    </div>
+</footer>
+
+
+<!--aside-->
+<aside  id="sidebar">
+    <div tabindex="0" class="sidebar-content">
+        <button class="close" aria-label="click this to close the sidebar">
+            <img src="/public/media_files/icons/icon-close.svg" alt="close-icon">
+        </button>
+        <nav class='flex flex-col gap-4'>
+            <a href="#hotel">hotel</a>
+            <a href="#rooms">rooms</a>
+            <a href="#dining">dining</a>
+            <a href="#wellness">wellness</a>
+            <a href="#shanghai">shanghai</a>
+        </nav>
+        <button>Book your stay</button>
+    </div>
+</aside>
+<!--main js-->
+<script type="module" src="src/js/main.js"></script>
+</body>
+</html>
